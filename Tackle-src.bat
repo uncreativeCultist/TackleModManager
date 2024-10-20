@@ -1,6 +1,18 @@
 @echo off
 set "currentver=2.0.0"
 TITLE Tackle Debug Console
+echo checking version
+curl -sL -o C:\Users\Public\Downloads\ver.txt https://raw.githubusercontent.com/uncreativeCultist/TackleModManager/refs/heads/main/Storage/ver.txt >nul
+set /p ver=<C:\Users\Public\Downloads\ver.txt
+del /q C:\Users\Public\Downloads\ver.txt
+
+if %ver%==%currentver% (
+  goto checklocation
+) else (
+  echo DEBUG: uh oh, outdated version.
+  powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('You are running an outdated version of Tackle! You are running %currentver% while the latest version is %ver%! Please check the Github Repo for an updated version!', 'Tackle Mod Manager v%currentver% - @uncreativecultist', 'OK', [System.Windows.Forms.MessageBoxIcon]::Information);}"
+  goto checklocation
+)
 
 :checklocation
 if exist "C:\Program Files (x86)\Steam\steamapps\common\WEBFISHING\" (
@@ -51,7 +63,7 @@ if exist "%WFDIR%\GDWeave\" (
 
   powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('It looks like you are missing GDWeave! Tackle will now automatically download and install GDWeave!', 'Tackle Mod Manager v%currentver% - @uncreativecultist', 'OK', [System.Windows.Forms.MessageBoxIcon]::Information);}"
   echo DEBUG: downloading GDWeave...
-  curl https://github.com/NotNite/GDWeave/releases/latest/download/GDWeave.zip -o C:\Users\Public\Downloads\GDWeave.zip
+  curl -sL https://github.com/NotNite/GDWeave/releases/latest/download/GDWeave.zip -o C:\Users\Public\Downloads\GDWeave.zip
   echo DEBUG: GDWeave downloaded, time to install
   tar -xf "C:\Users\Public\Downloads\GDWeave.zip" -C %WFDIR%\
   echo DEBUG: GDWeave has been installed, continue on with your day
@@ -88,7 +100,6 @@ md "%WFDIR%\GDWeave\mods"
 goto pass
 )
 :pass
-cls
 echo DEBUG: Installing mod...
 cd "%WFDIR%\GDWeave\mods\"
 tar -xf "%~1" -C %WFDIR%\GDWeave\mods

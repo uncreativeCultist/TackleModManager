@@ -19,5 +19,5 @@ Mod.zip/
  - [WebfishingLure](https://github.com/Sulayre/WebfishingLure) - Tackle was originally developed for Catcher/LureAPI
  - [Sulayre](https://github.com/Sulayre) - Supported development
  - [Achilles](https://steamcommunity.com/id/TheNewAchilles/) - ~~Person I kidnapped and forced to test Tackle~~ Volunteer Beta Tester
- - [NoobiesAreTheBestYea](https://steamcommunity.com/profiles/76561199009919604/) - ~~Fishing-related homocide victim~~ Willing Beta Tester "VERY simple i loved it 10/10
+ - [Noobies](https://steamcommunity.com/profiles/76561199009919604/) - ~~Fishing-related homocide victim~~ Willing Beta Tester "VERY simple i loved it 10/10
 easy to use for casuals like me"

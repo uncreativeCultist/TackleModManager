@@ -2,6 +2,11 @@
 Tackle is a simple mod manager that automates installing mods and the modloader for WEBFISHING!
 
 You can track the development of Tackle on it's [Trello page!](https://trello.com/b/rxKm1NZ7/tackle-mod-manager)
+## How do I use Tackle?
+**All you have to do is drag the mod zip file onto Tackle, and it'll do the rest for you!**
+
+Depending on your setup, you might have to manually select your game directory.
+
 ## How do I make my mod compatable with Tackle?
 In order for your mod to be compatible with Tackle, it just has to follow a simple format! Your mod layout should be as follows:
 ```

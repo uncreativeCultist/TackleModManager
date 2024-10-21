@@ -1,3 +1,6 @@
+# Notice: This repository has been moved to [UncreativeGit](https://git.lainiwakura.xyz/uncreativecultist/TackleSimpleInstaller)!
+
+
 # Tackle Mod Manager
 Tackle is a simple mod manager that automates installing mods and the modloader for WEBFISHING!
 

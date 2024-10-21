@@ -7,6 +7,8 @@ You can track the development of Tackle on it's [Trello page!](https://trello.co
 
 Depending on your setup, you might have to manually select your game directory.
 
+You may also need to install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.403-windows-x64-installer) (dw, I'm working on implementing this directly into Tackle!)
+
 ## How do I make my mod compatable with Tackle?
 In order for your mod to be compatible with Tackle, it just has to follow a simple format! Your mod layout should be as follows:
 ```
